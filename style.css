@@ -1,0 +1,784 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(img/thet.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+.logo:hover{
+    color: cyan;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: yellowgreen;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: cyan;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    font-family: segoe script;
+    color: deeppink;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.content button{
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid cyan;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: cyan;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+    color: black;
+}
+
+<!---css of my
+
+.my-section{
+    width: 100%;
+}
+
+.head{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.head h1{
+    font-size: 50px;
+    color: maroon;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.head h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.head p{
+    font-size: 18px;
+    color: green;
+    margin-bottom: 35px;
+}
+
+.ban{
+    width: 90%;
+    margin-bottom: 100px;
+    padding: 50px;
+}
+.my{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.my-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.my-image img{
+    height: auto;
+    max-width: 40%;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.my-image:hover img{
+    transform: scale(1.2);
+}
+.my-content{
+    flex: 1;
+}
+.my-content h2{
+    font-size: 23px;
+    text-align: center;
+    font-family: 'Courier New';
+    font-weight: bolder;
+    margin-bottom: 15px;
+    color: darkgreen;
+}
+.my-content p{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Courier New';
+    text-align: center;
+    line-height: 1.5;
+    color: deeppink;
+}
+
+@media screen and (max-width: 768px){
+    .head{
+        padding: 0px 20px;
+    }
+    .head h1{
+        font-size: 36px;
+    }
+    .head p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .ban{
+        padding: 0px;
+    }
+    .my{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .my-image{
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    .my-content{
+        padding: 0px;
+        font-size: 16px;
+    }
+    .my-content .read-more{
+        font-size: 16px;
+    }
+}
+
+
+<!---css of skills
+
+.skills-section{
+    width: 100%;
+
+}
+
+.ram{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ram h1{
+    font-size: 50px;
+    color: maroon;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.ram h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.ram p{
+    font-size: 18px;
+    color: green;
+    margin-bottom: 35px;
+}
+
+.contain{
+    width: 90%;
+    margin-bottom: 100px;
+    padding: 50px;
+}
+.skills{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill-content{
+    flex: 1;
+}
+.skill-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: darkgreen;
+}
+.skill-content p{
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.5;
+    color: deeppink;
+    font-family: 'Courier New' ;
+    font-weight: bolder;
+}
+@media screen and (max-width: 768px){
+    .ram{
+        padding: 0px 20px;
+    }
+    .ram h1{
+        font-size: 36px;
+    }
+    .ram p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .contain{
+        padding: 0px;
+    }
+    .skills{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .skills-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .skill-content{
+        padding: 0px;
+        font-size: 16px;
+    }
+}
+
+<!---css of experience
+
+.exp-section{
+    width: 100%;
+
+}
+
+.nice{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.nice h1{
+    font-size: 50px;
+    color: maroon;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.nice h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.nice p{
+    font-size: 18px;
+    color: green;
+    margin-bottom: 35px;
+}
+
+.cont{
+    width: 90%;
+    margin-bottom: 100px;
+    padding: 50px;
+}
+.experience{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.exp-content{
+    flex: 1;
+}
+.exp-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: darkgreen;
+}
+.exp-content p{
+    font-size: 30px;
+    line-height: 1.5;
+    color: deeppink;
+    font-family: 'Courier New' ;
+    font-weight: bolder;
+    text-align: center;
+}
+@media screen and (max-width: 768px){
+    .nice{
+        padding: 0px 20px;
+    }
+    .nice h1{
+        font-size: 36px;
+    }
+    .nice p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .cont{
+        padding: 0px;
+    }
+    .experience{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .exp-content{
+        padding: 0px;
+        font-size: 16px;
+    }
+}
+css for gallery--
+.gallery{
+    margin-bottom: 200px;
+    padding-top: 10px;
+}
+.gallery input{
+    display: none;
+}
+.gallery .gallery-container{
+    width: 100%;
+    text-align: center;
+}
+.gallery h1{
+    font-weight: normal;
+    position: relative;
+    font-size: 35px;
+    margin: 40px 0;
+    font-family: Courier;
+    font-weight: bolder;
+    color: maroon;
+}
+.gallery h1::before{
+    content: "";
+    position:absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+.gallery .top-content{
+    background-color: rgb(246, 243, 243);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgrey;
+}
+.gallery h3{
+    height: 100%;
+    line-height: 60px;
+    padding: 0 50px;
+    background-color: lightgrey;
+    color: white;
+}
+.gallery label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+    transition: color .5s;
+}
+.gallery label:hover{
+    color: black;
+}
+.gallery .photo-gallery{
+    width:90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:20px;
+}
+.gallery .pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+    cursor: pointer;
+    transition: .5s;
+}
+.gallery .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+.gallery .pic::before{
+    content: "PHOTO GALLERY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transform: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.gallery .pic:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 0;
+    background-color: rgb(0,0,0,.4);
+    transition: .3s;
+}
+.gallery .pic:hover::after{
+    height: 100%;
+}
+.gallery .pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+.gallery #check1:checked ~ .gallery-container .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+.gallery #check2:checked ~ .gallery-container .photo-gallery .Mine{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+.gallery #check2:checked ~ .gallery-container .photo-gallery .Family,
+.gallery #check2:checked ~ .gallery-container .photo-gallery .Friends{
+    opacity: 1;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+.gallery #check3:checked ~ .gallery-container .photo-gallery .Family{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+.gallery #check3:checked ~ .gallery-container .photo-gallery .Mine,
+.gallery #check3:checked ~ .gallery-container .photo-gallery .Friends{
+    opacity: 1;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+.gallery #check4:checked ~ .gallery-container .photo-gallery .Family{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+.gallery #check4:checked ~ .gallery-container .photo-gallery .Mine,
+.gallery #check4:checked ~ .gallery-container .photo-gallery .Family{
+    opacity: 1;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+@media screen and (max-width:992px){
+    .gallery .photo-gallery{
+        width:90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+}
+@media screen and (max-width: 768px){
+    .gallery h1{
+        font-weight: normal;
+        position: relative;
+        font-size: 28px;
+        margin: 40px 0;
+    }
+    .gallery h3{
+        display: none;
+    }
+    .gallery label{
+        height: 100%;
+        font-size: 11px;
+        color: gray;
+        cursor: pointer;
+        transition: color .5s;
+    }
+    .gallery label:hover{
+        color: black;
+    }
+    .gallery .photo-gallery{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+css for testimony--
+.blog-section{
+    width:100%;
+    margin-bottom: 200px;
+    margin-top: 100px;
+}
+
+.blog-section .section-content{
+    width: 85%;
+    margin: 20px auto;
+
+}
+
+.blog-section .section-content .nice{
+
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.blog-section .section-content .nice h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: calibri;
+    color: deeppink;
+}
+.blog-section .section-content .cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    margin: 25px auto;
+}
+
+.blog-section .section-content .cards .card{
+    width: 100%;
+    background-color: lightgray;
+    position: relative;
+    box-shadow: 10px 10px 5px #aaaaaa;
+
+}
+
+.blog-section .section-content .cards .card img{
+    width:100% ;
+    height: 250px;
+}
+
+.blog-section .section-content .cards .card .bts{
+    padding: 15px 20px;
+}
+
+.blog-section .section-content .cards .card .bts h4{
+    font-size: 24px;
+    color: deeppink;
+}
+.blog-section .section-content .cards .card .bts p{
+    font-size: 14px;
+    color: black;
+    margin: 10px 0px;
+    font-family: tahoma;
+}
+
+.blog-section .section-content .cards .card .blog-view{
+    padding-bottom: 20px;
+}
+
+.blog-section .section-content .cards .card .blog-view a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: goldenrod;
+    padding: 8px 15px;
+    margin-left: 20px;
+    color: black;
+}
+.blog-section .section-content .cards .card .posted-date p{
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background-color: goldenrod;
+    padding: 6px 15px;
+}
+
+@media screen and (max-width:992px){
+    .blog-section .section-conten t.cards{
+    grid-template-columns:repeat(2,1fr);
+}
+}
+@media screen and (max-width:768px){
+    .blog-section .section-content .cards{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+/*footer css*/
+.footer-basic{
+    padding: 40px 0;
+    background-color: white;
+    color: black;
+}
+
+.footer-basic .social{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer-basic .social a{
+    font-size: 50px;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer-basic .social a:hover{
+    opacity: 0.9;
+}
+
+.footer-basic .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 0;
+}
+
+#myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 15px;
+    font-family: 'Courier New';
+    border: none;
+    outline: none;
+    background-color: rgb(94, 4, 82);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+#myBtn:hover{
+    background-color: #c48ad0;
+    color: black;
+}

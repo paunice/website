@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UV-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY INFO</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== ""){
+                    event.preventDefault();
+                    var hash  = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <div class="banner" id="home">
+
+        <div class="navbar">
+            <div class="logo"> MY INFO </div>
+            <ul>
+                <li><a href="#home"> HOME </a></li>
+                <li><a href="#my"> MY INFO </a></li>
+                <li><a href="#skills"> MY SKILLS</a></li>
+                <li><a href="#experience"> MY EXPERIENCES </a></li>
+                <li><a href="#gallery"> MY GALLERY </a></li>
+
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1> KNOW ME BETTER </h1>
+                       <div class="button">
+               <button type="button"><span></span><a href="https://github.com/paunice"> GITHUB LANDING PAGE</a> </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!--this ends of home page-->
+        <div class="my-section" id="my">
+
+            <div class="head">
+                <h1> MY INFORMATION </h1>
+            </div>
+    
+           <div class="ban">
+            <section class="my">
+                    <div class="my-image">
+                        <img src="img/pic4.jpg">
+                    </div>
+    
+                    <div class="my-content">
+                        <h2> ABOUT ME </h2>
+                        <p> NAME: EUNICE TRICXIE E. PAULINO</p>
+                           <p>AGE: 21</p> 
+                           <p>DATE OF BIRTH: MARCH 28,2002</p> 
+                           <p> PLACE OF BIRTH: TARLAC CITY</p>
+                            <p>GENDER: FEMALE</p>
+                            <p>ADDRESS: ACAO,CABATUAN,ILOILO</p>
+                            <p>MOTHER'S NAME: MAE ESPEDES</p>
+                            <p>FATHER'S NAME: ROMMEL PAULINO</p>
+                            <p>MOTTO: VIRTUE CANNOT SEPARATE ITSELF FOM REALITY WITHOUT BECOMING A PRINCIPLE OF EVIL.</p>
+                    </div>
+    
+            </section>
+           </div>
+    
+        </div>
+    
+        <!--this ends of my-->
+        <div class="skills-section" id="skills">
+
+            <div class="ram">
+                <h1> SKILLS </h1>
+            </div>
+    
+           <div class="contain">
+            <section class="skills">
+                    <div class="skill-content">
+                        <p> My skills was communication skills because it is like active listening in communicating with others like advices or other communication.
+                            Being able to communicative person is  effectively  makes you 
+                            a more favored choice for your friends because these skills transfer a good communicating. 
+                           I can also do dances but only in tiktoks a simple dances that makes my stress away.
+                            I can also love to read novels and wattpad stories, also with love stories.  </p>
+
+                    </div>
+    
+            </section>
+           </div>
+    
+        </div>
+    
+        <!--this ends of skills-->
+    <div class="exp-section" id="experience">
+
+        <div class="nice">
+            <h1> EXPERIENCES </h1>
+        </div>
+
+       <div class="cont">
+        <section class="experience">
+
+                <div class="exp-content">
+                    <p> I had a lot of experiences in my life. I also experience of being an independent person. 
+                        It is hard for being an independent because it has a lot of hard times.
+                        I experience of became a SSG(Supreme Student Government) in my previous school. 
+                        In that moment we experience on how to beacame a leader, 
+                        a leader that needs of patience and to be a good example to others.
+                        I've experience a lot when we're in senior high school.
+                        When our immersion starts in senior high school we experienced a lot of moments that gives us knowledge.
+                    </p>
+
+                </div>
+
+        </section>
+       </div>
+
+    </div>
+
+    <!--Gallery Page-->
+    <div class="gallery" id="gallery">
+
+        <input type="radio" name="photos" id="check1" checked>
+        <input type="radio" name="photos" id="check2">
+        <input type="radio" name="photos" id="check3">
+        <input type="radio" name="photos" id="check4">
+
+        <div class="gallery-container">
+            <h1>PHOTO GALLERY</h1>
+            <div class="top-content">
+                <h3>Photo Gallery</h3>
+                <label for="check1">All Photos</label>
+                <label for="check2">My Photos</label>
+                <label for="check3">Family Photos</label>
+                <label for="check4">Friends Photos</label>
+            </div>
+
+            <div class="photo-gallery">
+                
+                <div class="pic Mine">
+                    <img src="img/b1.jpg">
+                </div>
+
+                <div class="pic Family">
+                    <img src="img/c1.jpg">
+                </div>
+
+                <div class="pic Mine">
+                    <img src="img/b2.jpg">
+                </div>
+
+                <div class="pic Friends">
+                    <img src="img/d1.jpg">
+                </div>
+
+                <div class="pic Family">
+                    <img src="img/c2.jpg">
+                </div>
+
+                <div class="pic Friends">
+                    <img src="img/d2.jpg">
+                </div>
+
+                <div class="pic Mine">
+                    <img src="img/b3.jpg">
+                </div>
+
+                <div class="pic Family">
+                    <img src="img/c3.jpg">
+                </div>
+
+                <div class="pic Friends">
+                    <img src="img/d3.jpg">
+                </div>
+
+                <div class="pic Mine">
+                    <img src="img/b4.jpg">
+                </div>
+
+                <div class="pic Family">
+                    <img src="img/c4.jpg">
+                </div>
+
+                <div class="pic Friends">
+                    <img src="img/d4.jpg">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+     
+    <!--FOOTER PAGE-->
+
+     <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+            </div>
+            <p class="copyright">MANAGED AND CREATED BY PFIFER @2023 </p>
+        </footer>
+    </div>
+
+    <a href="#home" id="myBtn" title="Go to Top">TOP</a>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+    
+        window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    </script>
+</body>
+</html>
+
